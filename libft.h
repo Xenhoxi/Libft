@@ -19,6 +19,12 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
 int				ft_atoi(char *str);
 void			*ft_memset(void	*pointeur, int value, unsigned int n);
 void			ft_bzero(void	*pointeur, unsigned int n);

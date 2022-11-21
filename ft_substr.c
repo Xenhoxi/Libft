@@ -6,7 +6,7 @@
 /*   By: ljerinec <ljerinec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 01:51:15 by ljerinec          #+#    #+#             */
-/*   Updated: 2022/11/20 18:57:27 by ljerinec         ###   ########.fr       */
+/*   Updated: 2022/11/21 18:10:02 by ljerinec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t			i;
 
 	i = 0;
-	lens = (unsigned int)ft_strlen(s);
 	if (!s)
 		return (0);
+	memalloc = 0;
+	lens = (unsigned int)ft_strlen(s);
 	if (start > lens)
 		len = 0;
 	lens = lens - start;

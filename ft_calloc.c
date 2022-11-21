@@ -6,7 +6,7 @@
 /*   By: ljerinec <ljerinec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 23:32:47 by ljerinec          #+#    #+#             */
-/*   Updated: 2022/11/16 23:56:53 by ljerinec         ###   ########.fr       */
+/*   Updated: 2022/11/21 18:11:04 by ljerinec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	char	*memalloc;
 
+	memalloc = 0;
 	memalloc = malloc(size * count);
 	if (!memalloc)
 		return (NULL);
