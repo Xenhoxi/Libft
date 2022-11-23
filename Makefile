@@ -46,13 +46,16 @@ SRC = ft_strlen.c \
 	ft_striteri.c \
 	ft_itoa.c \
 	ft_split.c \
-	ft_lstnew.c \
-	ft_lstadd_front.c \
-	ft_lstsize.c \
-	ft_lstlast.c \
 
 SRC_BONUS = ft_lstnew.c \
 			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstadd_back.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c \
 
 OBJECTS = $(SRC:.c=.o)
 BONUS = $(SRC_BONUS:.c=.o)
@@ -61,10 +64,13 @@ CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
 
-all: $(NAME)
+all: $(NAME) 
 
 $(NAME): $(OBJECTS)
 	$(AR) -r $@ $?
+
+bonus: $(BONUS)
+	$(AR) -r $(NAME) $?
 
 %.c: %.o
 		$(CC) -c $(CFLAGS) $?
@@ -77,4 +83,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re test
+.PHONY: all clean fclean re
