@@ -72,9 +72,6 @@ $(NAME): $(OBJECTS)
 bonus: $(BONUS)
 	$(AR) -r $(NAME) $?
 
-%.c: %.o
-		$(CC) -c $(CFLAGS) $?
-
 clean:
 	rm -f $(OBJECTS) $(BONUS)
 

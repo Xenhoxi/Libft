@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t n)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	u;
@@ -21,16 +21,16 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 	i = 0;
 	u = 0;
 	breakpoint = 0;
-	if (!str && !n)
+	if (!haystack && !len)
 		return (0);
-	if (!to_find[0])
-		return ((char *)str);
-	while (str[i] && i < n)
+	if (!needle[0])
+		return ((char *)haystack);
+	while (haystack[i] && i < len)
 	{
-		while (str[i] == to_find[u] && i < n)
+		while (haystack[i] == needle[u] && i < len)
 		{
-			if (to_find[u + 1] == '\0')
-				return ((char *)&str[breakpoint]);
+			if (needle[u + 1] == '\0')
+				return ((char *)&haystack[breakpoint]);
 			u++;
 			i++;
 		}

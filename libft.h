@@ -26,21 +26,21 @@ typedef struct s_list
 }					t_list;
 
 int		ft_atoi(const char *str);
-void	*ft_memset(void	*pointeur, int value, unsigned int n);
-void	ft_bzero(void	*pointeur, unsigned int n);
+void	*ft_memset(void	*b, int c, size_t len);
+void	ft_bzero(void	*s, size_t n);
 int		ft_isalnum(int character);
 int		ft_isalpha(int character);
 int		ft_isdigit(int character);
 int		ft_isprint(int caracter);
 void	*ft_memcpy(void *dest, void const *src, size_t len);
-int		ft_strlen(const char *str);
+size_t	ft_strlen(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_tolower(int caracter);
 int		ft_toupper(int caracter);
 int		ft_isascii(int caracter);
 void	*ft_memmove(void *dest, void *src, size_t len);
-char	*ft_strchr(char *str, int caracter);
-char	*ft_strrchr(char *str, int caracter);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(char *s, int c);
 size_t	ft_strlcpy(char	*dest, const char	*src, size_t n);
 char	*ft_strdup(char *src);
 int		ft_memcmp(void *s1, void *s2, size_t n);

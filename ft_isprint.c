@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-int	ft_isprint(int caracter)
+int	ft_isprint(int c)
 {
-	if ((caracter >= 32) && (caracter <= 126))
+	if ((c >= 32) && (c <= 126))
 		return (1);
 	else
 		return (0);

@@ -6,7 +6,7 @@
 /*   By: ljerinec <ljerinec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 03:13:20 by ljerinec          #+#    #+#             */
-/*   Updated: 2022/11/18 00:51:22 by ljerinec         ###   ########.fr       */
+/*   Updated: 2022/11/24 20:44:16 by ljerinec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		sizetotal;
 	char	*chainjoin;
-	int		i;
-	int		u;
+	size_t	i;
+	size_t	u;
 
 	i = -1;
 	u = 0;

@@ -12,17 +12,17 @@
 
 #include "libft.h"
 
-void	ft_bzero(void	*pointeur, unsigned int n)
+void	ft_bzero(void	*s, size_t n)
 {
-	unsigned int	i;
-	char			*buffer_pointeur;
+	size_t	i;
+	char	*buffer_pointeur;
 
-	buffer_pointeur = pointeur;
+	buffer_pointeur = s;
 	i = 0;
 	while (i < n)
 	{
 		buffer_pointeur[i] = '\0';
 		i++;
 	}
-	pointeur = (void *)buffer_pointeur;
+	s = (void *)buffer_pointeur;
 }
